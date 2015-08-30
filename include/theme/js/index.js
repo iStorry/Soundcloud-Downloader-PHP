@@ -4,7 +4,8 @@ document.getElementById("form-button").addEventListener("click", function(evt) {
 setTimeout(function() {
 	var q = a.elements["form-url"].value;
 	var load = new XMLHttpRequest();
-        var c = "./../soundcloud/include/class.autoload.php";
+  var path = document.location.pathname;
+        var c = "./.." + path + "include/class.autoload.php";
         var v = "q=" + q;
 		 load.open("POST", c, true);
         load.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
